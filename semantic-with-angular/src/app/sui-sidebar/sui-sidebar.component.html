@@ -1,0 +1,20 @@
+<div class="ui top attached demo menu">
+  <a class="item" (click)="sidebar.toggle()">
+    <i class="sidebar icon"></i> Menu
+  </a>
+</div>
+<sui-sidebar-container class="ui bottom attached segment">
+  <sui-sidebar class="inverted vertical" #sidebar>
+    <a routerLink="/" class="item"><i class="home icon"></i>Landing page</a>
+    <a routerLink="/search" class="item"><i class="search icon"></i>Search</a>
+    <a routerLink="/calendar" class="item"
+      ><i class="calendar icon"></i>Calendar</a
+    >
+  </sui-sidebar>
+  <sui-sidebar-sibling
+    class="ui center aligned container"
+    [isDimmedWhenVisible]="true"
+  >
+    <router-outlet></router-outlet>
+  </sui-sidebar-sibling>
+</sui-sidebar-container>

@@ -1,0 +1,11 @@
+<h2>Search for user repositories</h2>
+<sui-search placeholder="Github Repositories"
+            [optionsLookup]="optionsSearch"
+            searchDelay="300"
+            [resultTemplate]="template"
+            optionsField="name"
+            (resultSelected)="last = $event"></sui-search>
+
+<div class="ui left aligned segment">
+  <pre>{{ last | json }}</pre>
+</div>
